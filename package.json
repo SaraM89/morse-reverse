@@ -1,0 +1,13 @@
+{
+  "jest": {
+    "verbose": true
+  },
+  "dependencies": {
+    "jest": "^24.9.0",
+    "lint": "^0.7.0",
+    "sass": "^1.22.10"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
