@@ -5,152 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Morse & Reverse</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lexend+Tera&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgba(139, 250, 213, 0.788);
+        text-align: center;
+      }
+      header {
+        font-family: "Lexend Tera", sans-serif;
+        font-size: 3rem;
+        margin: 8% auto 5%;
+      }
+      #translated {
+        background-color: antiquewhite;
+        margin: 2% auto;
+      }
+    </style>
   </head>
   <body>
     <header>
       Morse & Reverse
     </header>
     <main>
-      Insert your morse code:
-      <input id="inputText" type="text" placeholder="write here.." />
+      Insert your text or morse code:<br /><br />
+      <input
+        id="inputText"
+        type="text"
+        placeholder="write here.."
+      /><br /><br />
       <button onclick="reveal()">Translate</button>
       <!-- <button onclick="reverse()">Reverse</button> -->
       <div id="translated"></div>
     </main>
-    <script>
-      reveal = event => {
-        var message = document.getElementById("inputText").value;
-        var messageConverted = [];
-        if (document.getElementById("inputText").value.includes("-" || ".")) {
-          // console.log("blue");
-          var alphabet = {
-            "-----": "0",
-            ".----": "1",
-            "..---": "2",
-            "...--": "3",
-            "....-": "4",
-            ".....": "5",
-            "-....": "6",
-            "--...": "7",
-            "---..": "8",
-            "----.": "9",
-            ".-": "a",
-            "-...": "b",
-            "-.-.": "c",
-            "-..": "d",
-            ".": "e",
-            "..-.": "f",
-            "--.": "g",
-            "....": "h",
-            "..": "i",
-            ".---": "j",
-            "-.-": "k",
-            ".-..": "l",
-            "--": "m",
-            "-.": "n",
-            "---": "o",
-            ".--.": "p",
-            "--.-": "q",
-            ".-.": "r",
-            "...": "s",
-            "-": "t",
-            "..-": "u",
-            "...-": "v",
-            ".--": "w",
-            "-..-": "x",
-            "-.--": "y",
-            "--..": "z",
-            "/": " ",
-            "-·-·--": "!",
-            "·-·-·-": ".",
-            "--··--": ","
-          };
-
-          message.split("  ").map(function(word) {
-            word.split(" ").map(function(letter) {
-              messageConverted.push(alphabet[letter]);
-            });
-            messageConverted.push(" ");
-          });
-          document.getElementById("translated").innerHTML = messageConverted;
-          //};
-
-          // reverse = event => {
-          //   console.log("red");
-        } else {
-          var alphabet = {
-            b: "-...",
-            a: ".-",
-            c: "-.-.",
-            d: "-..",
-            e: ".",
-            f: "..-.",
-            g: "--.",
-            h: "....",
-            i: "..",
-            j: ".---",
-            k: "-.-",
-            l: ".-..",
-            m: "--",
-            n: "-.",
-            o: "---",
-            p: ".--.",
-            q: "--.-",
-            r: ".-.",
-            s: "...",
-            t: "-",
-            u: "..-",
-            v: "...-",
-            w: ".--",
-            x: "-..-",
-            y: "-.--",
-            z: "--..",
-            "1": ".----",
-            "2": "..---",
-            "3": "...--",
-            "4": "....-",
-            "5": ".....",
-            "6": "-....",
-            "7": "--...",
-            "8": "---..",
-            "9": "----.",
-            "0": "-----",
-            ".": ".-.-.-",
-            ",": "--..--",
-            "'": ".----.",
-            '"': ".-..-.",
-            _: "..--.-",
-            ":": "---...",
-            ";": "-.-.-.",
-            "?": "..--..",
-            "!": "-.-.--",
-            "-": "-....-",
-            "+": ".-.-.",
-            "/": "-..-.",
-            "(": "-.--.",
-            ")": "-.--.-",
-            "=": "-...-",
-            "@": ".--.-.",
-            " ": " "
-          };
-
-          message.split(" ").map(function(word) {
-            word.split("").map(function(letter) {
-              messageConverted.push(alphabet[letter]);
-              messageConverted.push(" ");
-            });
-            messageConverted.push("\xa0\xa0\xa0\xa0");
-          });
-        }
-        document.getElementById("translated").innerHTML = messageConverted.join(
-          ""
-        );
-      };
-    </script>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
-
-<!-- var messageConverted = []; message.split(" ").map(function(word) { word.split("
-").map(function(letter) { messageConverted.push(alphabet[letter]); });
-messageConverted.push(" "); }); document.getElementById("translated").innerHTML
-= messageConverted.join( "" ); -->

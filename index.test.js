@@ -1,3 +1,4 @@
+import reveal from "./index";
 const a = ".-";
 const b = "-...";
 const c = "-.-.";
@@ -35,18 +36,25 @@ const seven = "--...";
 const eight = "---..";
 const nine = "----.";
 
-const reveal = () => {
-  return h + " " + e + " " + l + " " + l + " " + o;
-};
+// const reveal = () => {
+//   return h + " " + e + " " + l + " " + l + " " + o;
+// };
 
-const reverse = () => {
-  return ".... . .-.. .-.. ---";
-};
+// const reverse = () => {
+//   return ".... . .-.. .-.. ---";
+// };
 
+// test("the output of a digit", function() {
+//   expect(reveal()).toEqual(".... . .-.. .-.. ---");
+// });
+
+// test("the output of a digit", function() {
+//   expect(reverse()).toEqual(h + " " + e + " " + l + " " + l + " " + o);
+// });
+
+const reveal = require("./index.js");
+message = "hello";
+//document.getElementById("inputText").value = message;
 test("the output of a digit", function() {
-  expect(reveal()).toEqual(".... . .-.. .-.. ---");
-});
-
-test("the output of a digit", function() {
-  expect(reverse()).toEqual(h + " " + e + " " + l + " " + l + " " + o);
+  expect(reveal(message)).toEqual(".... . .-.. .-.. --- ");
 });
