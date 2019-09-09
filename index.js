@@ -56,7 +56,6 @@ const morseTo = message => {
       messageConverted.push(alphabet[letter]);
     });
     messageConverted.push(" ");
-    //return messageConverted;
   });
   return messageConverted.join("");
 };
@@ -124,8 +123,7 @@ const engTo = message => {
       messageConverted.push(alphabet[letter]);
       messageConverted.push(" ");
     });
-    //messageConverted.push("\xa0\xa0\xa0\xa0");
-    //return messageConverted;
+ 
   });
   return messageConverted.join("");
 };
